@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>edge-algorithm</artifactId>
+    <artifactId>core</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -22,14 +22,6 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>com.fipoka2</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
 
 
 </project>

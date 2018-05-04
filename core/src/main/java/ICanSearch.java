@@ -1,4 +1,4 @@
-package core;
+import java.util.List;
 
 /**
  * Интерфейс для классов реализующих алгоритм поиска подстроки в строке.
@@ -11,5 +11,5 @@ public interface ICanSearch
      * @param find строка, которую необходимо найти.
      * @return массив чисел, содержащих иныормацию о том с какого символа найжена строка.
      */
-   int[] search(String baseStr, String find);
+   List<Integer> search(String baseStr, String find);
 }

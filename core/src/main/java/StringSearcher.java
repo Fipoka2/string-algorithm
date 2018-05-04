@@ -1,10 +1,10 @@
-package core;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.List;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class StringSearcher
@@ -53,13 +53,15 @@ public class StringSearcher
                 break;
             }
             case "N": {
-                path = "D:\\Projects\\arithmetic2\\Reference" +
-                        "-arithmetic-coding\\string-algorithms\\edge-algorithm\\src\\main\\java\\data.txt";
+                Properties prop = new Properties();
+                prop.load(StringSearcher.class.getClassLoader().getResourceAsStream("filepath.properties"));
+                path = prop.getProperty("file");
                 break;
             }
             default: {
-                path = "D:\\Projects\\arithmetic2\\Reference" +
-                        "-arithmetic-coding\\string-algorithms\\edge-algorithm\\src\\main\\java\\data.txt";
+                Properties prop = new Properties();
+                prop.load(StringSearcher.class.getClassLoader().getResourceAsStream("filepath.properties"));
+                path = prop.getProperty("file");
                 break;
             }
         }
@@ -71,10 +73,11 @@ public class StringSearcher
     }
 
     private void search(String str, String find) {
-        int[] array;
+        List<Integer> array;
         Instant start = Instant.now();
         array = searcher.search(str, find);
         Instant end = Instant.now();
         System.out.println("Длительность поиска: " + Duration.between(start, end));
+        System.out.println(array);
     }
 }
