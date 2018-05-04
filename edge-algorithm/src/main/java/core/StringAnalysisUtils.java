@@ -5,6 +5,8 @@ package core;
  */
 public final class StringAnalysisUtils {
 
+    //private constructor
+    private StringAnalysisUtils() {}
     /**
      * Получить массив максимальных граней подстрок.
      * @param stringData - строка.
@@ -25,15 +27,12 @@ public final class StringAnalysisUtils {
             else
                 arr[i + 1] = 0;
         }
-//        for (int idx = 0; idx<arr.length; idx++)
-//            if (arr[idx] > 12)
-//                System.out.println(idx);
 
         return arr;
     }
 
     /**
-     *
+     *Получить массив блоков
      * @param stringData
      * @return
      */
